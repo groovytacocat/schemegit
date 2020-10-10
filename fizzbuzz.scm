@@ -1,0 +1,5 @@
+(define (fizzbuzz x)
+	(cond ((and (= (modulo x 3) 0) (= (modulo x 5) 0)) (display "FizzBuzz"))
+		  ((= (modulo x 3) 0) (display "Fizz"))
+		  ((= (modulo x 5) 0) (display "Buzz"))
+		  (else (display "WOMP"))))
