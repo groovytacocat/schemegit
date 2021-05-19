@@ -1,0 +1,6 @@
+(define (sol b n)
+  (define (sol-iter b n a)
+    (cond ((= n 0) a)
+          ((even? n) (sol-iter (square b) (/ n 2) a))
+          (else (sol-iter b (- n 1) (* b a)))))
+  (sol-iter b n 1))
